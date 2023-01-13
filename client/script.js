@@ -90,7 +90,7 @@ const handleSubmit = async (e) => {
 
  loader(messageDiv) // start the loader
 
- const response = await fetch('http://localhost:3001', {
+ const response = await fetch('http://localhost:3009', {
   method: 'POST',
   headers: {
       'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ if (response.ok) {
 } else {
   const err = await response.text()
 
-  messageDiv.innerHTML = "Something went wrong"
+  messageDiv.innerHTML = "oh no!"
   alert(err)
 }
 }
